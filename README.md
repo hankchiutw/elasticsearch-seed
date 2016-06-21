@@ -1,5 +1,5 @@
-# api-seed
-API service seed project using express.js.
+# elasticsearch-seed
+Seed project with elasticsearch CRUD and RESTful API
 
 ### Folder structure
 ```sh
@@ -14,7 +14,7 @@ API service seed project using express.js.
 │   ├── auth        # authentication libraries(passport)
 │   ├── auth.js     # load auth libraries
 │   ├── config.js   # basic app settings
-│   ├── db.js       # handle database connection
+│   ├── elasticsearch.js       # handle elasticsearch connection
 │   ├── env         # environment settings(respective)
 │   ├── express.js  # setup express
 │   ├── middlewares # common middlewares
@@ -25,18 +25,13 @@ API service seed project using express.js.
 ├── public          # static files location
 ├── README.md       # this file
 ├── server          # server side scripts, ex. do migration
-│   └── lib
 ├── test            # testing scripts
-│   ├── api.spec.js
-│   ├── lib
-│   └── user.js
 └── test-runner.js  # where testing scripts invoked from
 ```
 
 ### Features
-- Extended MongoDB driver [mongoose-extend](https://www.npmjs.com/package/mongoose-extend).
+- Elasticsearch ODM style module [elasticsearch-extend](https://www.npmjs.com/package/elasticsearch-extend).
 - Deploy using [pm2](http://pm2.keymetrics.io/).
-- Testing on-the-fly(after deployed) with [mocha](https://mochajs.org/).
 - ES6 syntax(generator, class, etc).
 
 ### Pre-install
@@ -55,7 +50,5 @@ npm install
 
 ```sh
 npm start # local dev environment
-npm run deploy:prod # git push to production branch and deploy to production server
 npm run log # show local process logs
-npm run log:prod # show remote process logs(production server)
 ```

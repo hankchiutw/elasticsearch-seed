@@ -55,9 +55,9 @@ function common(Model){
     }
 
     function *createOne(req, res, next){
+        logger.info(`(${__filename}): createOne:`, req.body);
         let obj = yield Model.createOne(req.body);
-        logger.info(typeof obj);
-        res.ok(obj);
+        res.ok(obj.toJSON());
     }
 
     function *updateOne(req, res, next){
