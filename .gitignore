@@ -50,8 +50,7 @@ crashlytics-build.properties
 # vim temp files
 *.sw*
 
-# bower lib
-#lib/
+lib/
 
 node_modules
 public/lib

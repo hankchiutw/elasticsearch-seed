@@ -1,10 +1,9 @@
 {
-  "name": "elasticsearch-poc",
+  "name": "elasticsearch-extend",
   "version": "0.1.0",
-  "description": "basic elasticsearch usage",
+  "description": "extended elasticsearch with ODM functions",
   "main": "index.js",
   "scripts": {
-    "start": "node index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [
@@ -13,6 +12,7 @@
   "author": "Hank",
   "license": "ISC",
   "dependencies": {
+    "co": "^4.6.0",
     "elasticsearch": "^11.0.1"
   }
 }

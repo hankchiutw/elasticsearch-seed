@@ -1,6 +1,6 @@
 "use strict";
 
-const es = require('lib/elasticsearch-extend');
+const es = require('elasticsearch-extend');
 
 module.exports = es.model('user', {
     username: { type: "string"},
