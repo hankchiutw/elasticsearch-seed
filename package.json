@@ -1,17 +1,14 @@
 {
-  "name": "api-seed",
-  "version": "1.0.0",
-  "description": "platform server",
+  "name": "elasticsearch-seed",
+  "version": "0.1.0",
+  "description": "elasticsearch seed project",
   "main": "app.js",
-  "directories": {
-    "doc": "docs"
-  },
   "repository": {
     "type": "git",
-    "url": "git@github.com:hankchiutw/api-seed.git"
+    "url": "git@github.com:hankchiutw/elasticsearch-seed.git"
   },
   "config": {
-    "appname": "api-seed",
+    "appname": "elasticsearch-seed",
     "host_prod": "example.com",
     "ssh_prod": "ssh -t root@example.com -p 3124"
   },
@@ -31,7 +28,7 @@
   },
   "keywords": [
     "api",
-    "mongoose"
+    "elasticsearch"
   ],
   "author": "Hank",
   "license": "ISC",
@@ -45,10 +42,10 @@
     "chai-mongo": "^1.0.0",
     "co-nextware": "^1.0.1",
     "ejs": "^2.3.4",
+    "elasticsearch-odm": "^0.3.0",
     "express": "^4.13.3",
     "fs-readdir-recursive": "^1.0.0",
     "mocha": "^2.4.5",
-    "mongoose-extend": "^0.1.2",
     "morgan": "^1.6.1",
     "node-mime": "^1.0.0",
     "passport": "^0.3.2",

@@ -11,11 +11,10 @@ const app = express();
  */
 
 require('config/express')(app);
-require('config/routes')(app, auth);
-
-require('config/db')(boot);
+require('config/elasticsearch')(boot);
 
 function boot(){
+    require('config/routes')(app, auth);
     let portInit = process.env.PORT || config.port;
     (function boot(){
         let port = portInit;
@@ -25,7 +24,6 @@ function boot(){
             console.log('config:', config);
             console.log('NODE_ENV:', process.env.NODE_ENV);
             console.log('Express app started on port:', port);
-            require('./test-runner');
         }).on('error', function(err){
             if(err.code == 'EADDRINUSE'){
                 console.log('****** EADDRINUSE, find next');

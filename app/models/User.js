@@ -1,25 +1,10 @@
 "use strict";
 
-const BaseSchema = require('./BaseSchema');
-const schema = new BaseSchema(require('./UserSchema'));
+const es = require('lib/elasticsearch-extend');
 
-/**
- * Models instance methods
- */
-
-schema.defineMethods({
+module.exports = es.model('user', {
+    username: { type: "string"},
+    nickname: { type: "string"},
+    fullname: { type: "string"},
+    phone: { type: "string"}
 });
-
-/**
- * Static methods of mongoose.model 
- */
-
-schema.defineStatics({
-});
-
-/**
- * Register
- */
-
-const modelName = __filename.substring(__filename.lastIndexOf("/")+1, __filename.lastIndexOf("."));
-module.exports = schema.mongoose.model(modelName, schema, modelName);

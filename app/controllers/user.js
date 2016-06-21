@@ -1,7 +1,8 @@
 'use strict';
 
 const cn = require('co-nextware');
-const common = require('app/controllers/common')('User');
+//const common = require('app/controllers/common')('User');
+const User = require('app/models/User');
 
 /**
  * Expose

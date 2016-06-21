@@ -19,5 +19,8 @@ module.exports = function(app, auth){
     router.post('/login', user.login);
     router.all('/logout', user.logout);
 
+    router.get('/', common.list);
+    router.post('/', common.createOne);
+
     return router;
 };

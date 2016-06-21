@@ -1,7 +1,7 @@
 {
   "apps" : [
     {
-      "name": "api-seed-"+process.env.NODE_ENV || 'dev',
+      "name": "elasticsearch-seed-"+process.env.NODE_ENV || 'dev',
       "script": "app.js",
       "node_args": "--harmony",
       "watch": ["app", "config", "lib", "app.js", "*.json", "modules", "test-runner.js", "test/*.js"],
@@ -17,8 +17,8 @@
       "host": "example.com",
       "port": "3124",
       "ref": "origin/prod",
-      "repo": "git@github.com:hankchiutw/api-seed.git",
-      "path": "/var/app/api-seed/prod",
+      "repo": "git@github.com:hankchiutw/elasticsearch-seed.git",
+      "path": "/var/app/elasticsearch-seed/prod",
       "post-deploy": "npm install; NODE_ENV=prod pm2 startOrRestart ecosystem.json"
     }
   }
