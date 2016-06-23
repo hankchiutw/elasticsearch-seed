@@ -9,8 +9,9 @@ const path = require('path');
 const crypto = require('crypto');
 const mime = require('node-mime');
 
-const res = require('config/middlewares/res');
 const cors = require('config/middlewares/cors');
+
+const API = require('api-express');
 
 /**
  * Expose
@@ -39,6 +40,10 @@ module.exports = function(app){
      */
 
     app.use(cors);
-    app.use(res);
+    app.use(API.hook({
+        apiOk: true,
+        apiFail: true
+    }));
+
 
 };

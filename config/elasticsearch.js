@@ -11,10 +11,10 @@ module.exports = function(boot){
 
     es.connect({
         host: 'localhost:9200',
-        log: 'trace'
+        log: 'info'
     })
     .then(boot)
     .catch( err => {
-        console.log('(elasticsearch) err:', err);
+        console.error('(elasticsearch) err:', err.stack);
     });
 };

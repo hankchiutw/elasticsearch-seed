@@ -1,6 +1,8 @@
 'use strict';
 
-const common = require('app/controllers/common')('User');
+const User = require('app/models/User');
+const api = require('api-express').create(User);
+
 const user = require('app/controllers/user');
 const router = require('express').Router();
 
@@ -19,8 +21,8 @@ module.exports = function(app, auth){
     router.post('/login', user.login);
     router.all('/logout', user.logout);
 
-    router.get('/', common.list);
-    router.post('/', common.createOne);
+    router.get('/', api.list);
+    router.post('/', api.createOne);
 
     return router;
 };
